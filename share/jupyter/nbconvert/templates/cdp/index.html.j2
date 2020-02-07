@@ -1,0 +1,7 @@
+{%- extends 'ubc/index.html.j2' -%}
+
+{%- block page_num_header -%}
+{{ resources.include_css("static/header_style.css") }}
+{% set pdf_header = nb.metadata.get('pdf_metadata', {}).get('text1', 'failed') %}
+<h1 class=pdf-header>{{pdf_header}}</h1>
+{%- endblock page_num_header -%}
